@@ -1,0 +1,6 @@
+<osv-character
+	cdkDrag
+	*ngFor="let character of characters; trackBy: trackCharacters"
+	[character]="character"
+	(cdkDragDropped)="characterMoved.emit($event)">
+</osv-character>

@@ -1,0 +1,16 @@
+<div class="name" #name contenteditable (input)="tier.name = name.innerHTML" [ngStyle]="{ 'background-color': tier.color }">
+	{{ tier.name }}
+</div>
+<div
+	class="character-container"
+	[cdkDropListData]="tier.characters"
+	cdkDropListOrientation="horizontal"
+	cdkDropList
+	(cdkDropListDropped)="characterMoved.emit($event)">
+	<osv-character cdkDrag *ngFor="let character of tier.characters" [character]="character"></osv-character>
+</div>
+<div class="settings">
+	<fa-icon [icon]="cog" class="cog"></fa-icon>
+	<fa-icon [icon]="arrowUp" class="arrowUp"></fa-icon>
+	<fa-icon [icon]="arrowDown" class="arrowDown"></fa-icon>
+</div>

@@ -1,0 +1,9 @@
+:host {
+	display: inline-block;
+	cursor: move;
+
+	img {
+		width: var(--osv-character-size);
+		height: var(--osv-character-size);
+	}
+}

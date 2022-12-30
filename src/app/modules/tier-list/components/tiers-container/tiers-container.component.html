@@ -1,0 +1,1 @@
+<osv-tier *ngFor="let tier of tiers; trackBy: trackTier" (characterMoved)="characterMoved.emit($event)" [tier]="tier"></osv-tier>

@@ -1,0 +1,5 @@
+<div cdkDropListGroup>
+	<osv-tiers-container (characterMoved)="drop($event)" [tiers]="tiers"></osv-tiers-container>
+	<osv-available-characters cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="characters" [characters]="characters">
+	</osv-available-characters>
+</div>
